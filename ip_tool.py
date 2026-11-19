@@ -1,12 +1,3 @@
-"""IP Address Information Tool.
-
-Features:
-  - Query IPv4 and/or IPv6 public IP
-  - Fetch detailed info for each IP via ipwho.is
-  - NEW: CLI flags --ipv4 / --ipv6 / --json FILE
-  - NEW: Export results to JSON
-"""
-
 import argparse
 import json
 import requests
@@ -35,7 +26,7 @@ def get_ip(url, version):
 
 
 def get_ip_information(ip):
-    """Return a dict of IP details, or None on failure."""
+    """Return a dict of IP details, or none on failure."""
     try:
         response = requests.get(f"{INFO_URL}{ip}", timeout=15)
         response.raise_for_status()
@@ -67,7 +58,7 @@ def get_ip_information(ip):
 
 
 def print_info(info):
-    """Pretty-print the info dict."""
+    """Print the info dict."""
     for key, value in info.items():
         print(f"{key.title()}: {value if value else 'N/A'}")
 
