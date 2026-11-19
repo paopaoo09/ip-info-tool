@@ -11,6 +11,7 @@ information about it (city, country, ISP, timezone, etc.).
 - **NEW:** Export results to JSON
 - Automated tests with pytest
 - CI pipeline with GitHub Actions
+- Testing for the CI pipeline
 
 ## Install
 
