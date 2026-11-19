@@ -8,20 +8,20 @@ INFO_URL = "https://ipwho.is/"
 
 
 def get_ip(url, version):
-    """Return the public IP as a string, or None on any failure."""
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        data = response.json()
-        return data["ip"]
-    except requests.exceptions.Timeout:
-        print(f"{version}: Request timed out.")
-    except requests.exceptions.ConnectionError:
-        print(f"{version}: Could not connect. This IP version may be unavailable.")
-    except requests.exceptions.RequestException as error:
-        print(f"{version}: Request failed: {error}")
-    except (ValueError, KeyError):
-        print(f"{version}: Invalid API response.")
+    # """Return the public IP as a string, or None on any failure."""
+    # try:
+    #     response = requests.get(url, timeout=10)
+    #     response.raise_for_status()
+    #     data = response.json()
+    #     return data["ip"]
+    # except requests.exceptions.Timeout:
+    #     print(f"{version}: Request timed out.")
+    # except requests.exceptions.ConnectionError:
+    #     print(f"{version}: Could not connect. This IP version may be unavailable.")
+    # except requests.exceptions.RequestException as error:
+    #     print(f"{version}: Request failed: {error}")
+    # except (ValueError, KeyError):
+    #     print(f"{version}: Invalid API response.")
     return None
 
 
